@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="login">
+        <div class="article">
+            <div class="nav_header"><a href="#"><span id="hashtag"># </span>خبر جدید</a></div>
+            <form action="" method="post">
+
+                <label for="title">تیتر خبر</label>
+
+                <div class="input_container">
+                    <input style="direction: rtl" class="text_input" type="text" name="title" id="">
+                </div>
+
+                <label for="content">متن کامل خبر</label>
+
+                <div class="input_container">
+                    <textarea style="line-height: 1.5;min-height: 100px" class="text_input" type="text" name="content"
+                              id=""></textarea>
+                </div>
+                <label for="category">دسته</label>
+                <div class="input_container">
+                    <select name="category" id="category" class="text_input">
+                        {% for cat in cats %}
+                            <option value="{{ cat.id }}">{{ cat.name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <label for="content">برچسب</label>
+                <div class="input_container">
+                    <select name="tag" id="tag" class="text_input">
+                        {% for tag in tags %}
+                            <option value="{{ tag.id }}">{{ tag.keyword }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <div class="btn">
+                    <a href="/login" class="register">اخبار</a>
+                    <input type="submit" id="submit" value="ارسال خبر">
+                </div>
+
+            </form>
+        </div>
+    </div>
+    </div>
+{% endblock %}

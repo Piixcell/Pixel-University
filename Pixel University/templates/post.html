@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block content %}
+    <h3 style="margin: 20px;direction: rtl"><span id="hashtag"># </span>در این صفحه نام نویسنده مطلب و تاریخ آن نمایش
+        داده می شود.</h3>
+    <div id="main">
+        <nav>
+            <div class="nav_header"><a href="#"><span id="hashtag"># </span>فهرست مطالب</a></div>
+            <ul class="nav_articles">
+                <li><a href="/about">معرفی گروه</a></li>
+                <li><a href="/">اخبار</a></li>
+                <li><a href="#">فرم ها</a></li>
+                <li><a href="#">وضعیت برگزاری کلاس ها</a></li>
+                <li><a href="#">سرفصل دروس</a></li>
+                <li><a href="/add/news">خبر جدید +</a></li>
+            </ul>
+        </nav>
+        <article>
+            {% if x %}
+                <div class="article">
+                    <div class="nav_header"><a href="#"><span id="hashtag"># </span>{{ x.title }}</a></div>
+                    <p>{{ x.content }}</p>
+
+
+                    <div class="tags"><span id="hashtag"># </span>دسته :
+                        {{ x.category.name }}&ensp;
+                    </div>
+                    <div class="categories"><span id="hashtag"># </span>برچسب :
+                        {% for tag in x.tags %}
+                            <a href="/tag/{{ tag.id }}">{{ tag.keyword }} </a>
+                        {% endfor %}
+                    </div>
+                    <div class="author">{{ x.user.name }}</div>
+                    <div class="date">{{ x.date }}</div>
+                </div>
+            {% else %}
+                {% for x in tag %}
+                    <div class="article">
+                        <div class="nav_header"><a href="#"><span id="hashtag"># </span>{{ x.title }}</a></div>
+                        <p>{{ x.content }}</p>
+
+
+                        <div class="tags"><span id="hashtag"># </span>دسته :
+                            {{ x.category.name }}&ensp;
+                        </div>
+                        <div class="categories"><span id="hashtag"># </span>برچسب :
+                            {% for tag in x.tags %}
+                                <a href="/tag/{{ tag.id }}">{{ tag.keyword }}&ensp;</a>
+                            {% endfor %}
+                        </div>
+                        <div class="author">{{ x.user.name }}</div>
+                        <div class="date">{{ x.date }}</div>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        </article>
+    </div>
+{% endblock %}

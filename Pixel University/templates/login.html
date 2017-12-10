@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="login">
+        <div class="article">
+            <div class="nav_header"><a href="#"><span id="hashtag"># </span>ورود به سامانه</a></div>
+            <form action="" method="post">
+
+                <label for="username">نام کاربری</label>
+
+                <div class="input_container">
+                    <input class="text_input" type="text" name="username" id="">
+                </div>
+                <label for="password">کلمه عبور</label>
+
+                <div class="input_container">
+                    <input class="text_input" type="password" name="password" id="">
+                </div>
+                <div class="btn">
+                    <a href="/register" class="register">ثبت نام</a>
+                    <input type="submit" id="submit" value="ورود">
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
