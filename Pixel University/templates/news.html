@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% block content %}
+    <div id="main">
+        <nav>
+            <div class="nav_header"><a href="#"><span id="hashtag"># </span>فهرست مطالب</a></div>
+            <ul class="nav_articles">
+                <li><a href="/about">معرفی گروه</a></li>
+                <li><a href="/">اخبار</a></li>
+                <li><a href="/user/{{ current_user.id }}">پروفایل</a></li>
+                <li><a href="#">فرم ها</a></li>
+                <li><a href="#">وضعیت برگزاری کلاس ها</a></li>
+            </ul>
+        </nav>
+        <article>
+            <div class="article">
+                <div class="nav_header"><a href="#"><span id="hashtag"># </span>اخبار مربوط به {{ season }}
+                    ترم {{ year }}</a></div>
+                <div class="items">
+                    <div class="item">
+                        <div class="nav_header"><a href="#"><span id="hashtag"># </span>ساختمان های داده</a></div>
+                        <div class="lesson-info">
+                            <h5>از این پس تعداد واحد نظری این درس از 4 واحد به 3 واحد کاهش پیدا کرد</h5>
+                        </div>
+                        <div class="lesson-pic">
+                            <img src="/static/res/img/newspaper.png" alt="Pixel University">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="nav_header"><a href="#"><span id="hashtag"># </span>انتخاب واحد</a></div>
+                        <div class="lesson-info">
+                            <h5>انتخاب واحد ترم بعد قبل از اتمام ترم جاری انجام خواهد شد</h5>
+                        </div>
+                        <div class="lesson-pic">
+                            <img src="/static/res/img/newspaper.png" alt="Pixel University">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="nav_header"><a href="#"><span id="hashtag"># </span>نمرات میان ترم</a></div>
+                        <div class="lesson-info">
+                            <h5>برای دریافت نمره میان ترم معماری کامپیوتر اینجا کلیک کنید.</h5>
+                        </div>
+                        <div class="lesson-pic">
+                            <img src="/static/res/img/newspaper.png" alt="Pixel University">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="nav_header"><a href="#"><span id="hashtag"># </span>کلاس فوق العاده درس مبانی
+                            کامپیوتر و برنامه سازی</a></div>
+                        <div class="lesson-info">
+                            <h5>کلاس فوق العاده درس مبانی کامپیوتر و برنامه سازی برای هر دو گروه دانشجویان روز سه شنبه
+                                07/09/1396 ساعت 15-17 در آمفی تئاتر شهید نورانی دانشکده فنی برگزار می گردد.</h5>
+                        </div>
+                        <div class="lesson-pic">
+                            <img src="/static/res/img/newspaper.png" alt="Pixel University">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+    </div>
+{% endblock %}

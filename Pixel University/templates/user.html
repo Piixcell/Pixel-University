@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+    <div id="main">
+        <nav>
+            <div class="nav_header"><a href="#"><span id="hashtag"># </span>فهرست مطالب</a></div>
+            <ul class="nav_articles">
+                <li><a href="/about">معرفی گروه</a></li>
+                <li><a href="/">اخبار</a></li>
+                <li><a href="#">فرم ها</a></li>
+                <li><a href="#">وضعیت برگزاری کلاس ها</a></li>
+                <li><a href="#">سرفصل دروس</a></li>
+                {% if current_user.is_authenticated and current_user.isProf == True %}
+                    <li><a href="/add/news">خبر جدید +</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+        <article>
+            <div class="article">
+                <div class="nav_header"><a href="#"><span id="hashtag"># </span>حساب کاربری</a></div>
+                <p><a href="#"><span id="hashtag"># </span>نام : {{ user.name }}</a></p>
+                <p><a href="#"><span id="hashtag"># </span>سمت : {{ "استاد" if user.isProf else "دانشجو" }}</a></p>
+                <p><a href="#"><span id="hashtag"># </span>دروس ارائه شده : <a href="#">بهار 96-97</a>
+                <br>
+                    <p>طراحی الگوریتم</p>
+                    <p>ساختمان های داده</p>
+                    <p>زبان تخصصی</p>
+                </a></p>
+            </div>
+        </article>
+
+    </div>
+{% endblock %}

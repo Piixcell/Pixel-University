@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block content %}
+    <div id="main">
+        <nav>
+            <div class="nav_header"><a href="#"><span id="hashtag"># </span>فهرست مطالب</a></div>
+            <ul class="nav_articles">
+                <li><a href="/about">معرفی گروه</a></li>
+                <li><a href="/">اخبار</a></li>
+                <li><a href="/user/{{ current_user.id }}">پروفایل</a></li>
+                <li><a href="#">فرم ها</a></li>
+                <li><a href="#">وضعیت برگزاری کلاس ها</a></li>
+            </ul>
+        </nav>
+        <article>
+            <div class="article">
+                <div class="nav_header"><a href="#"><span id="hashtag"># </span>تکالیف و پروژه ها</a></div>
+                <div class="items">
+                    <div class="item">
+                        <div class="nav_header"><a href="#"><span id="hashtag"># </span>ساختمان های داده</a></div>
+                        <div class="lesson-info">
+                            <h5>فایل پروژه : <a href="#">دانلود</a></h5>
+                            <h5>مهلت تحویل : 2 آبان</h5>
+                            <h5>توضیحات : لورم ایپسوم لورم ایپسوم لورم ایپسوم لورم ایپسوم لورم ایپسوم</h5>
+                        </div>
+                        <div class="upload">
+                            <h6>آپلود فایل خود برای استاد</h6>
+                            <input type="file" name="" id="">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="nav_header"><a href="#"><span id="hashtag"># </span>پردازش زبان های طبیعی</a></div>
+                        <div class="lesson-info">
+                            <h5>فایل پروژه : <a href="#">دانلود</a></h5>
+                            <h5>مهلت تحویل : 8 آذر</h5>
+                            <h5>توضیحات : لورم ایپسوم لورم ایپسوم لورم ایپسوم لورم ایپسوم لورم ایپسوم</h5>
+                        </div>
+                        <div class="upload">
+                            <h6>آپلود فایل خود برای استاد</h6>
+                            <input type="file" name="" id="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+    </div>
+{% endblock %}

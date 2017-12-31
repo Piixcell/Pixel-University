@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block content %}
+    <div id="main">
+        <nav>
+            <div class="nav_header"><a href="#"><span id="hashtag"># </span>فهرست مطالب</a></div>
+            <ul class="nav_articles">
+                <li><a href="/about">معرفی گروه</a></li>
+                <li><a href="/">اخبار</a></li>
+                <li><a href="/user/{{ current_user.id }}">پروفایل</a></li>
+                <li><a href="#">فرم ها</a></li>
+                <li><a href="#">وضعیت برگزاری کلاس ها</a></li>
+            </ul>
+        </nav>
+        <article>
+            <div class="article">
+                <div class="nav_header"><a href="#"><span id="hashtag"># </span>{{ season }} ترم {{ year }}</a></div>
+                <div class="cards">
+                    <div class="card"><a href="/courses/{{ course }}/syllabus">
+                        <img src="../static/res/img/scholarship.png">
+                        <h5>دروس</h5>
+                    </a></div>
+                    <div class="card"><a href="/courses/{{ course }}/resources">
+                        <img src="../static/res/img/teamwork.png">
+                        <h5>منابع</h5>
+                    </a></div>
+                    <div class="card"><a href="/courses/{{ course }}/slides">
+                        <img src="../static/res/img/projection.png">
+                        <h5>اسلاید</h5>
+                    </a></div>
+                    <div class="card"><a href="/courses/{{ course }}/news">
+                        <img src="../static/res/img/newspaper.png">
+                        <h5>اخبار</h5>
+                    </a></div>
+                    <div class="card"><a href="/courses/{{ course }}/homeworks">
+                        <img src="../static/res/img/notebook.png">
+                        <h5>تکالیف</h5>
+                    </a></div>
+                </div>
+            </div>
+        </article>
+
+    </div>
+{% endblock %}

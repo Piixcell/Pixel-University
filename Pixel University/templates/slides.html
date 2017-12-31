@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+{% block content %}
+    <div id="main">
+        <nav>
+            <div class="nav_header"><a href="#"><span id="hashtag"># </span>فهرست مطالب</a></div>
+            <ul class="nav_articles">
+                <li><a href="/about">معرفی گروه</a></li>
+                <li><a href="/">اخبار</a></li>
+                <li><a href="/user/{{ current_user.id }}">پروفایل</a></li>
+                <li><a href="#">فرم ها</a></li>
+                <li><a href="#">وضعیت برگزاری کلاس ها</a></li>
+            </ul>
+        </nav>
+        <article>
+            <div class="article">
+                <div class="nav_header"><a href="#"><span id="hashtag"># </span>اسلاید ها و منابع</a></div>
+                <div class="slides">
+                    <div class="slide">
+                        <div class="nav_header"><a href="#"><span id="hashtag"># </span>زبان تخصصی</a></div>
+                        <a href="#">
+                            <div class="lesson-info">
+                                <h5>English for computer engineers</h5>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <div class="nav_header"><a href="#"><span id="hashtag"># </span>آمار و احتمال</a></div>
+                        <a href="#">
+                            <div class="lesson-info">
+                                <h5>Probabilities and Statistics for engineers</h5>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <div class="nav_header"><a href="#"><span id="hashtag"># </span>مبانی برنامه نویسی</a></div>
+                        <a href="#">
+                            <div class="lesson-info">
+                                <h5>آموزش زبان C (جعفرنژاد قمی)</h5>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <div class="nav_header"><a href="#"><span id="hashtag"># </span>زبان تخصصی</a></div>
+                        <a href="#">
+                            <div class="lesson-info">
+                                <h5>English for computer engineers</h5>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <div class="nav_header"><a href="#"><span id="hashtag"># </span>مبانی برنامه نویسی</a></div>
+                        <a href="#">
+                            <div class="lesson-info">
+                                <h5>آموزش زبان C (جعفرنژاد قمی)</h5>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <div class="nav_header"><a href="#"><span id="hashtag"># </span>آمار و احتمال</a></div>
+                        <a href="#">
+                            <div class="lesson-info">
+                                <h5>Probabilities and Statistics for engineers</h5>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <div class="nav_header"><a href="#"><span id="hashtag"># </span>آمار و احتمال</a></div>
+                        <a href="#">
+                            <div class="lesson-info">
+                                <h5>Probabilities and Statistics for engineers</h5>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <div class="nav_header"><a href="#"><span id="hashtag"># </span>زبان تخصصی</a></div>
+                        <a href="#">
+                            <div class="lesson-info">
+                                <h5>English for computer engineers</h5>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <div class="nav_header"><a href="#"><span id="hashtag"># </span>مبانی برنامه نویسی</a></div>
+                        <a href="#">
+                            <div class="lesson-info">
+                                <h5>آموزش زبان C (جعفرنژاد قمی)</h5>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+    </div>
+{% endblock %}
