@@ -2,20 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta property="og:image" content="../static/logo.gif"/>
+    <meta property="og:image" content="/static/logo.gif"/>
     <meta property="og:title" content="Pixel University"/>
     <meta property="og:url" content="https://pixel.ac.ir"/>
     <meta property="og:site_name" content="Pixel"/>
     <meta property="og:type" content="blog"/>
-    <meta property="og:description" content="Computer Engineering blog at Pixel University" />
-    <meta property="article:tag" content="Pixel University Computer Engineering" />
+    <meta property="og:description" content="Computer Engineering blog at Pixel University"/>
+    <meta property="article:tag" content="Pixel University Computer Engineering"/>
     <title>گروه مهندسی کامپیوتر دانشگاه پیکسل</title>
-    <link rel="stylesheet" href="../static/style.css" type="text/css">
-    <link rel="shortcut icon" type="image/x-icon" href="../static/logo.gif">
+    <link rel="stylesheet" href="/static/style.css" type="text/css">
+    <link rel="shortcut icon" type="image/x-icon" href="/static/logo.gif">
 </head>
 <body>
 <header>
-    <img src="../static/res/img/logo.jpg" alt="Pixel University">
+    <img src="/static/res/img/logo.jpg" alt="Pixel University">
 
     <h1>گروه مهندسی کامپیوتر دانشگاه پیکسل</h1>
 </header>
@@ -24,9 +24,14 @@
         <li><a href="/">اخبار</a></li>
         <li><a href="/about">معرفی گروه</a></li>
         <li><a href="#">فرم ها</a></li>
-        <li><a href="#">سرفصل دروس</a></li>
-        <li><a href="/register">ثبت نام</a></li>
-        <li><a href="/login">ورود به سیستم</a></li>
+        <li><a href="/courses">سرفصل دروس</a></li>
+        {% if not current_user.is_authenticated %}
+            <li><a href="/register">ثبت نام</a></li>
+            <li><a href="/login">ورود به سیستم</a></li>
+        {% else %}
+            <li><a href="/user/{{ current_user.id }}">پروفایل {{ current_user.name }}</a></li>
+            <li><a href="/logout">خروج</a></li>
+        {% endif %}
     </ul>
     {% block content %}
 
@@ -42,7 +47,7 @@
                     <li><a href="/">اخبار</a></li>
                     <li><a href="#">فرم ها</a></li>
                     <li><a href="#">وضعیت برگزاری کلاس ها</a></li>
-                    <li><a href="#">سرفصل دروس</a></li>
+                    <li><a href="/courses">سرفصل دروس</a></li>
                 </ul>
             </div>
             <h6>&copy; Copyright Pixel University - Computer Engineering Faculty</h6>

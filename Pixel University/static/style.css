@@ -113,6 +113,7 @@ header h1 {
 
 /*----------------*/
 #main {
+    padding: 20px;
     margin-top: 20px;
     display: flex;
     flex-flow: row-reverse wrap;
@@ -236,7 +237,8 @@ header h1 {
     color: #35315f;
     display: block;
 }
-.tags,.categories{
+
+.tags, .categories {
     width: 100%;
     padding: 25px;
 }
@@ -437,9 +439,11 @@ footer .footer {
     display: flex;
     flex-flow: column wrap;
 }
+
 .footer .links {
     margin: auto;
 }
+
 .footer .links ul {
     display: flex;
     flex: 0 0 auto;
@@ -477,4 +481,141 @@ footer .footer {
         flex-flow: column wrap;
         text-align: center;
     }
+}
+
+/*courses*/
+.courses {
+    display: flex;
+    margin: auto;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.courses a {
+    flex: 0 0 auto;
+    padding: 20px;
+    margin: 20px;
+    background-color: cadetblue;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.courses a:hover {
+    background-color: #015a9e;
+}
+
+/*select*/
+.article .cards {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+.cards .card {
+    box-sizing: border-box;
+    padding: 20px;
+    margin: 20px;
+    transition: 0.2s;
+    background-color: #015a9e;
+}
+
+.card a {
+    display: flex;
+    flex-flow: column nowrap;
+    text-decoration: none;
+}
+
+.card a * {
+    margin: auto;
+}
+
+.card img {
+    width: 90%;
+}
+
+.card h5 {
+    padding: 10px;
+    font-size: 17px;
+    color: #fff;
+}
+
+.card:hover {
+    box-shadow: 0 0 0 8px #35315f inset;
+}
+
+/*syllabus*/
+.items {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
+.items .item {
+    width: 100%;
+    margin: 20px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    border: 2px solid #35315f;
+}
+
+.item .lesson-pic {
+    flex-grow: 1;
+    display: flex;
+    direction: ltr;
+}
+
+.item .lesson-pic img {
+    padding: 15px;
+}
+
+.item .lesson-info {
+    flex-grow: 4;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.item h5 {
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.upload {
+    flex-grow: 1;
+    display: flex;
+    direction: ltr;
+    flex-flow: column wrap;
+}
+
+.upload h6 {
+    margin: auto;
+}
+
+.upload input {
+    padding: 10px;
+}
+
+/*slides*/
+.slides {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.slides .slide {
+    margin: 10px;
+    border: 2px solid #35315f;
+    background-color: #dfafec;
+    text-align: center;
+}
+.slide .lesson-info{
+    padding: 10px;
+}
+.slides a{
+    text-decoration: none;
+    color: black;
 }

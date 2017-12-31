@@ -11,7 +11,9 @@
                 <li><a href="#">فرم ها</a></li>
                 <li><a href="#">وضعیت برگزاری کلاس ها</a></li>
                 <li><a href="#">سرفصل دروس</a></li>
-                <li><a href="/add/news">خبر جدید +</a></li>
+                {% if current_user.is_authenticated and current_user.isProf == True %}
+                    <li><a href="/add/news">خبر جدید +</a></li>
+                {% endif %}
             </ul>
         </nav>
         <article>
